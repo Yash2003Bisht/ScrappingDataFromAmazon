@@ -38,7 +38,7 @@ def getNextPage(soup):
     return "https://amazon.in" + soup.find("a", {'class': 's-pagination-item s-pagination-button'})["href"]
 
 def main(url):
-    for _ in range(19):
+    for _ in range(20):
         soupObject = getSoupObject(url)
         getSeparatedData(soupObject)
         url = getNextPage(soupObject)
